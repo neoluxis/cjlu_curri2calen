@@ -1,0 +1,29 @@
+semester:
+  # Start date or registration date of the semester
+  start: 2026-09-13
+  # Select first monday of semester: next, this
+  monday_prima: next
+
+schedule:
+  lasting: 45 # Time one class lasting, in minutes
+  gap: 5 # Gap between classes
+  
+  times:
+    am: # Ante meridiem
+      begin: "8:00" # When the first class begins
+      count: 5 # Number of classes
+      split: # Split a bigger gap after the index-th class.
+        index: 2
+        gap: 20 # in minutes
+    pm: # Post meridiem
+      begin: "13:30"
+      count: 4
+      split:
+        index: 2
+        gap: 10
+    noct: # Nocto
+      begin: "18:00"
+      count: 3
+      split: null
+
+
